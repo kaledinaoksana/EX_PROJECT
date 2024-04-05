@@ -1,22 +1,17 @@
 #!/bin/bash
 
-NAME_ENV="ex_env"
+# Импортируем константы из constants.sh
+source constants.sh
 
-python -m venv $NAME_ENV
-source $NAME_ENV/bin/activate
-
-pip install --upgrade pip
-pip install -r requirements.txt
-
+# Инициализация git
 git init
 
+# Конфигурация git
 git config user.name "Oksana Kaledina"
 git config user.email "kaledinaoa@gmail.com"
 
+# .gitignore
 touch .gitignore
 echo $NAME_ENV/ >> .gitignore
 echo ".vscode" >> .gitignore
 echo "*cache*" >> .gitignore
-
-pre-commit install
-pre-commit
