@@ -15,3 +15,6 @@ touch .gitignore
 echo $NAME_ENV/ >> .gitignore
 echo ".vscode" >> .gitignore
 echo "*cache*" >> .gitignore
+
+pre-commit install
+pre-commit
